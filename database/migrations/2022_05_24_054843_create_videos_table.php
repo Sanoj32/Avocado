@@ -20,7 +20,7 @@ class CreateVideosTable extends Migration
             $table->boolean('active');
             $table->string('link');
             $table->unsignedBigInteger('genre_id');
-            $table->foreign('genre_id')->references('id')->on('genres');
+            $table->foreign('genre_id')->references('id')->on('genres')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
