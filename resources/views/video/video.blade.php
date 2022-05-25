@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-md-2"></div>
-            <div class="col-md-7">
+            <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
                         <a href="/">Home</a>
@@ -32,7 +32,7 @@
                                     <th>Description</th>
                                     <th>Active</th>
                                     <th>Link</th>
-                                    <th>Action</th>
+                                    <th style="min-width: 180px">Action</th>
 
                                 </tr>
                             </thead>

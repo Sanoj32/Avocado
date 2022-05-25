@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-md-2"></div>
-            <div class="col-md-7">
+            <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
                         <a class="font-weight-light" href="/">Home</a>
@@ -29,7 +29,7 @@
                                 <tr>
                                     <th>Name</th>
                                     <th>Description</th>
-                                    <th>Action</th>
+                                    <th style="min-width: 180px">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -48,7 +48,7 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <form action="/genre/{{$genre->id}}/edit">
-                                                    <button class="btn btn-secondary" type="submit" class="m-2"> Edit </button>
+                                                    <button class="btn btn-secondary" type="submit"> Edit </button>
                                                 </form>
 
                                             </div>
