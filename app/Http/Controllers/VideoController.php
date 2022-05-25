@@ -18,7 +18,7 @@ class VideoController extends Controller
             if ($video->active == True) {
                 $video->active = 'Yes';
             } else {
-                $video->acive = 'No';
+                $video->active = 'No';
             }
         }
         return view('video.video', compact('videos', 'genre'));
