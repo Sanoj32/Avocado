@@ -45,15 +45,24 @@
 
                                     <td>{{ $genre->description }}</td>
                                     <td>
-                                        <form action="/genre/{{$genre->id}}/edit">
-                                            <button type="submit" class="m-2"> Edit </button>
-                                        </form>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <form action="/genre/{{$genre->id}}/edit">
+                                                    <button class="btn btn-secondary" type="submit" class="m-2"> Edit </button>
+                                                </form>
 
-                                        <form action="/genre/{{$genre->id}}" method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button class="btn btn-danger" type="submit">Delete</button>
-                                        </form>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <form action="/genre/{{$genre->id}}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="btn btn-danger" type="submit">Delete</button>
+                                                </form>
+                                            </div>
+
+                                        </div>
+
+
                                     </td>
 
                                 </tr>

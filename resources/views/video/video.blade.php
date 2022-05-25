@@ -44,15 +44,23 @@
                                     <td>{{ $video->active }}</td>
                                     <td><a href="{{ $video->link }}">{{ $video->link }}</a></td>
                                     <td>
-                                        <form action="/videos/{{$video->id}}/edit">
-                                            <button type="submit" class="m-2"> Edit </button>
-                                        </form>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <form action="/videos/{{$video->id}}/edit">
+                                                    <button class="btn btn-secondary" type="submit"> Edit </button>
+                                                </form>
 
-                                        <form action="/videos/{{$video->id}}" method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button class="btn btn-danger" type="submit">Delete</button>
-                                        </form>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <form action="/videos/{{$video->id}}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="btn btn-danger" type="submit">Delete</button>
+                                                </form>
+
+                                            </div>
+
+                                        </div>
                                     </td>
 
                                 </tr>
