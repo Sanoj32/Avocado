@@ -32,7 +32,7 @@
                                     <th>Description</th>
                                     <th>Active</th>
                                     <th>Link</th>
-                                    <th style="min-width: 180px">Action</th>
+                                    <th style="min-width: 150px">Action</th>
 
                                 </tr>
                             </thead>
@@ -45,13 +45,13 @@
                                     <td><a href="{{ $video->link }}">{{ $video->link }}</a></td>
                                     <td>
                                         <div class="row">
-                                            <div class="col-md-6">
+                                            <div class="col-md-4">
                                                 <form action="/videos/{{$video->id}}/edit">
                                                     <button class="btn btn-secondary" type="submit"> Edit </button>
                                                 </form>
 
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-8">
                                                 <form action="/videos/{{$video->id}}" method="POST">
                                                     @csrf
                                                     @method('DELETE')

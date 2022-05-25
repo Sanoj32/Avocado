@@ -29,7 +29,7 @@
                                 <tr>
                                     <th>Name</th>
                                     <th>Description</th>
-                                    <th style="min-width: 180px">Action</th>
+                                    <th style="min-width: 150px">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -46,13 +46,13 @@
                                     <td>{{ $genre->description }}</td>
                                     <td>
                                         <div class="row">
-                                            <div class="col-md-6">
+                                            <div class="col-md-4">
                                                 <form action="/genre/{{$genre->id}}/edit">
                                                     <button class="btn btn-secondary" type="submit"> Edit </button>
                                                 </form>
 
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-8">
                                                 <form action="/genre/{{$genre->id}}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
