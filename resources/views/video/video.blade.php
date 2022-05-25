@@ -15,6 +15,7 @@
             <div class="col-md-7">
                 <div class="card">
                     <div class="card-header">
+                        <a href="/">Home</a>
                         <h1>
                             List of Videos under {{$genre->name}}
                             <a href="/genre/{{$genre->id}}/videos/create"><button class="btn btn-success" type="submit">Add video</button></a>

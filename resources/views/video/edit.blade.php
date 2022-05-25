@@ -15,6 +15,7 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
+                        <a href="/">Home</a>
                         <h1>
                             Edit a video
                         </h1>

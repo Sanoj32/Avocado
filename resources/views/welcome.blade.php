@@ -15,6 +15,7 @@
             <div class="col-md-7">
                 <div class="card">
                     <div class="card-header">
+                        <a class="font-weight-light" href="/">Home</a>
                         <h1>
                             List of genres
                             <span class="div">

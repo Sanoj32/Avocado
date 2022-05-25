@@ -15,6 +15,8 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
+                        <a href="/">Home</a>
+
                         <h1>
                             Add a video under {{$genre->name}}
                         </h1>
