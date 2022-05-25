@@ -6,7 +6,6 @@ use App\Models\Genre;
 use App\Models\Video;
 
 use Illuminate\Http\Request;
-use phpDocumentor\Reflection\Types\Void_;
 
 class VideoController extends Controller
 {
