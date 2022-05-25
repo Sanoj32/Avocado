@@ -16,39 +16,38 @@
                 <div class="card">
                     <div class="card-header">
                         <h1>
-                            List of genres
-                            <span class="div">
-                                <a href='/genre/create'><button type="button" class="btn btn-secondary" href=''>Create a genre</button></a>
-                            </span>
+                            List of Videos under {{$genre->name}}
+                            <a href="/genre/{{$genre->id}}/videos/create"><button class="btn btn-success" type="submit">Add video</button></a>
+
                         </h1>
                     </div>
+                    @if(count($videos))
+
                     <div class="card-body">
                         <table class="table table-striped">
                             <thead>
                                 <tr>
                                     <th>Name</th>
                                     <th>Description</th>
+                                    <th>Active</th>
+                                    <th>Link</th>
                                     <th>Action</th>
+
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($genres as $genre)
+                                @foreach ($videos as $video)
                                 <tr>
-
+                                    <td>{{ $video->name }}</td>
+                                    <td>{{ $video->description }}</td>
+                                    <td>{{ $video->active }}</td>
+                                    <td><a href="{{ $video->link }}">{{ $video->link }}</a></td>
                                     <td>
-                                        <a href="/genre/{{$genre->id}}/videos">{{ $genre->name }}</a>
-
-                                    </td>
-
-
-
-                                    <td>{{ $genre->description }}</td>
-                                    <td>
-                                        <form action="/genre/{{$genre->id}}/edit">
+                                        <form action="/videos/{{$video->id}}/edit">
                                             <button type="submit" class="m-2"> Edit </button>
                                         </form>
 
-                                        <form action="/genre/{{$genre->id}}" method="POST">
+                                        <form action="/videos/{{$video->id}}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <button class="btn btn-danger" type="submit">Delete</button>
@@ -60,6 +59,9 @@
                             </tbody>
                         </table>
                     </div>
+
+                    @endif
+
                 </div>
             </div>
             <div class="col-md-2"></div>
